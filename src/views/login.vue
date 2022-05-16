@@ -2,7 +2,7 @@
  * @Author: xjc 2324881835@qq.com
  * @Date: 2022-05-16 18:52:08
  * @LastEditors: xjc 2324881835@qq.com
- * @LastEditTime: 2022-05-16 19:09:43
+ * @LastEditTime: 2022-05-16 19:46:34
  * @FilePath: \Bingo-manage\bingo-manage\src\views\login.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -28,7 +28,7 @@
           </el-form-item>
           <!--按钮-->
           <el-form-item class="btns">
-            <el-button type="primary" >登录</el-button>
+            <el-button type="primary" @click="toHome">登录</el-button>
             <el-button type="info" >重置</el-button>
           </el-form-item>
       </el-form>
@@ -37,7 +37,13 @@
 </template>
 
 <script setup>
-
+  import { useRouter } from 'vue-router';
+  // 创建router实例
+  const router = useRouter()
+  // 点击前往主页
+  function toHome() {
+    router.push('/home')
+  }
 </script>
 
 
