@@ -1,4 +1,4 @@
-# bingo-manage
+# bingo-management
 
 <img src="https://img.shields.io/badge/node.js-14.18.1-blue"><img src="https://img.shields.io/badge/bootstarp-4.4.1-brightgreen"><img src="https://img.shields.io/badge/cookie--session-1.4.0-green"><img src="https://img.shields.io/badge/ejs-3.0.1-yellowgreen"><img src="https://img.shields.io/badge/express-4.17.1-yellow"><img src="https://img.shields.io/badge/multer-1.4.2-red"><img src="https://img.shields.io/badge/mysql-5.7-lightgrey"><img src="https://img.shields.io/badge/Vue-3-orange">
 
