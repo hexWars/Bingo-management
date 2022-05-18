@@ -2,7 +2,7 @@
  * @Author: xjc 2324881835@qq.com
  * @Date: 2022-05-16 18:39:16
  * @LastEditors: xjc 2324881835@qq.com
- * @LastEditTime: 2022-05-16 19:15:13
+ * @LastEditTime: 2022-05-17 21:22:39
  * @FilePath: \Bingo-manage\bingo-manage\src\router\index.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -21,7 +21,29 @@ const routes = [
   },
   {
     path: '/home',
-    component: () => import('../views/home.vue')
+    component: () => import('../views/home.vue'),
+    children:[
+      {
+        path: '',
+        redirect: '/dashboard/workspace'
+      },
+      {
+        path: '/dashboard/workspace',
+        component: () => import('../views/dashboard/workspace/index.vue')
+      },
+      {
+        path: '/dashboard/analysis',
+        component: () => import('../views/dashboard/analysis/index.vue')
+      },
+      {
+        path: '/userAdmin/administrators',
+        component: () => import('../views/userAdmin/administrators.vue')
+      },
+      {
+        path: '/userAdmin/ordinaryuser',
+        component: () => import('../views/userAdmin/ordinaryuser.vue')
+      }
+    ]
   }
 ]
 

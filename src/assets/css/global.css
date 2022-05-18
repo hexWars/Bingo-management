@@ -21,3 +21,8 @@ html,body,#app{
 .el-pagination{
   margin-top: 15px;
 }
+
+.index-top{
+  margin-top: 20px;
+  margin-left: 20px;
+}
