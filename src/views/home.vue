@@ -2,7 +2,7 @@
  * @Author: xjc 2324881835@qq.com
  * @Date: 2022-05-16 19:18:34
  * @LastEditors: xjc 2324881835@qq.com
- * @LastEditTime: 2022-05-17 21:22:46
+ * @LastEditTime: 2022-05-21 21:39:29
  * @FilePath: \Bingo-manage\Bingo-management\src\views\home.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -20,6 +20,7 @@
       background-color="#001529"
       text-color="#fff"
       active-text-color="#1890ff"
+      :unique-opened="true"
     >
       <el-sub-menu index="/dashboard">
         <template #title>
@@ -41,14 +42,14 @@
           <el-menu-item index="/userAdmin/ordinaryuser">用户列表</el-menu-item>
         </el-menu-item-group>
       </el-sub-menu>
-      <el-sub-menu index="3">
+      <el-sub-menu index="/examine">
         <template #title>
           <el-icon><List /></el-icon>
           <span>内容管理</span>
         </template>
         <el-menu-item-group>
-          <el-menu-item index="3-1">实验查看</el-menu-item>
-          <el-menu-item index="3-2">问卷查看</el-menu-item>
+          <el-menu-item index="/examine/experiment">实验查看</el-menu-item>
+          <el-menu-item index="/examine/questionnaire">问卷查看</el-menu-item>
         </el-menu-item-group>
       </el-sub-menu>
       <el-sub-menu index="4">
