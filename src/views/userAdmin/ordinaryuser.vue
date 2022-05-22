@@ -2,7 +2,7 @@
  * @Author: xjc 2324881835@qq.com
  * @Date: 2022-05-17 21:20:12
  * @LastEditors: xjc 2324881835@qq.com
- * @LastEditTime: 2022-05-21 21:25:43
+ * @LastEditTime: 2022-05-22 17:46:03
  * @FilePath: \Bingo-manage\Bingo-management\src\views\userAdmin\ordinaryUser.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -34,13 +34,13 @@
 
 <script setup>
   import { ref, onBeforeMount } from 'vue'
-  import { getOrdinaryUser } from '../../request/apis.js'
   import { Delete } from '@element-plus/icons-vue'
+  import { getallUsers } from '../../request/user.ts'
   // 小程序注册成员列表
   const userList = ref([])
   // 获取成员列表
   const getUserList = async () => {
-    const res = await getOrdinaryUser()
+    const res = await getallUsers()
     console.log('----------',res)
   }
 
