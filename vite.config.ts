@@ -1,8 +1,9 @@
+// @ts-nocheck
 /*
  * @Author: xjc 2324881835@qq.com
  * @Date: 2022-05-16 18:32:38
  * @LastEditors: xjc 2324881835@qq.com
- * @LastEditTime: 2022-05-17 21:47:55
+ * @LastEditTime: 2022-05-22 20:44:17
  * @FilePath: \Bingo-manage\bingo-manage\vite.config.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -25,17 +26,16 @@ export default defineConfig({
       resolvers: [ElementPlusResolver()],
     })
   ],
-  // productionSourceMap: false,
-  // // 跨域设置
-  // devServer: {
-  //   proxy: {
-  //     '/api': {
-  //       target: 'https://sehnsucht.top',
-  //       changeOrigin: true,
-  //       pathRewrite: {
-  //         '^/api': ''
-  //       }
-  //     }
-  //   }
-  // }
+  productionSourceMap: false,
+  // 跨域设置
+  server: {
+    proxy: {
+      '/api': {
+        target: 'https://sehnsucht.top',
+        secure: false,
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, '')
+      }
+    }
+  }
 })
