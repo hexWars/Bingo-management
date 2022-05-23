@@ -6,6 +6,7 @@
     "strictNullChecks": true,
     "esModuleInterop": true,
     "experimentalDecorators": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "jsx": "preserve"
   }
 }

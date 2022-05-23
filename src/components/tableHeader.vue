@@ -2,7 +2,7 @@
  * @Author: xjc 2324881835@qq.com
  * @Date: 2022-05-16 20:15:55
  * @LastEditors: xjc 2324881835@qq.com
- * @LastEditTime: 2022-05-21 21:56:11
+ * @LastEditTime: 2022-05-23 11:18:23
  * @FilePath: \Bingo-manage\Bingo-management\src\components\tableHeader.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -10,7 +10,7 @@
   <el-card class="box-card" id="pageHeader">
     <div class="logo">超级管理员</div>
     <p>{{timeGreeting}} | 超级管理员  我猜你可能累了</p>
-    <el-dropdown @command="changeLanguage"  class="el-dropdown-link">
+    <el-dropdown class="el-dropdown-link">
       <span>
         <el-icon><Setting /></el-icon>
       </span>
@@ -23,7 +23,7 @@
   </el-card>
 </template>
 
-<script setup>
+<script setup lang="ts">
   import { Setting } from '@element-plus/icons-vue'
   import { useRouter } from 'vue-router'
   const timeGreeting = new Date(Date.now()).getHours() > 12 ? '下午好' : '早上好'

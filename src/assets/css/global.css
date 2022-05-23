@@ -14,7 +14,8 @@ html,body,#app{
 }
 
 .el-table{
-  margin-top: 15px;
+  /* margin-top: 15px; */
+  margin: 20px;
   font-size: 12px;
 }
 
@@ -25,4 +26,8 @@ html,body,#app{
 .index-top{
   margin-top: 20px;
   margin-left: 20px;
+}
+
+ul,li{
+  list-style: none;
 }

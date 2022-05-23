@@ -2,7 +2,7 @@
  * @Author: xjc 2324881835@qq.com
  * @Date: 2022-05-17 21:20:12
  * @LastEditors: xjc 2324881835@qq.com
- * @LastEditTime: 2022-05-22 18:15:40
+ * @LastEditTime: 2022-05-23 14:20:29
  * @FilePath: \Bingo-manage\Bingo-management\src\views\userAdmin\ordinaryUser.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -17,13 +17,15 @@
       style="width: 100%"
       stripe
       :data="userList">
-      <el-table-column label="用户名"></el-table-column>
-      <el-table-column label="性别"></el-table-column>
-      <el-table-column label="oppid"></el-table-column>
-      <el-table-column label="学校"></el-table-column>
-      <el-table-column label="学号"></el-table-column>
+      <el-table-column label="姓名" prop="name"></el-table-column>
+      <el-table-column label="昵称" prop="nickname"></el-table-column>
+      <el-table-column label="性别" prop="sex"></el-table-column>
+      <el-table-column label="oppid" prop="openid"></el-table-column>
+      <el-table-column label="学校" prop="schoolName"></el-table-column>
+      <el-table-column label="学号" prop="schoolNumber"></el-table-column>
       <el-table-column label="操作">
-        <template slot-scope="scope">
+        <template #default="scope">
+          <el-button type="primary" :icon="Share" circle></el-button>
           <el-button type="danger" :icon="Delete" circle></el-button>
         </template>
       </el-table-column>
@@ -34,14 +36,15 @@
 
 <script setup lang="ts">
   import { ref, onBeforeMount } from 'vue'
-  import { Delete } from '@element-plus/icons-vue'
+  import { Delete, Share } from '@element-plus/icons-vue'
   import { getallUsers } from '../../request/user'
   // 小程序注册成员列表
   const userList = ref([])
   // 获取成员列表
   const getUserList = async () => {
     const res = await getallUsers()
-    console.log('----------',res)
+    console.log(res.data)
+    userList.value = res.data
   }
 
   // 挂载之前
@@ -51,7 +54,5 @@
 </script>
 
 <style scoped>
-.table-context{
-  margin: 20px;
-}
+
 </style>

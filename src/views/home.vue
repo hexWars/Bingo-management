@@ -2,7 +2,7 @@
  * @Author: xjc 2324881835@qq.com
  * @Date: 2022-05-16 19:18:34
  * @LastEditors: xjc 2324881835@qq.com
- * @LastEditTime: 2022-05-21 21:39:29
+ * @LastEditTime: 2022-05-23 14:52:10
  * @FilePath: \Bingo-manage\Bingo-management\src\views\home.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -87,13 +87,14 @@ import tableHeader from '../components/tableHeader.vue'
   width: 200px;
   height: 100%;
   margin: 0;
-  /* transform: translateY(-10px); */
 }
 .main-context{
-  width: 89.5%;
+  float: right;
+  width: 89%;
   margin: 0;
   position: absolute;
   top: 80px;
   left: 200px;
+  height: 100%;
 }
 </style>
