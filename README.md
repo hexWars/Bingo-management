@@ -20,7 +20,7 @@ BINGO 全国高校被试招募平台是一款连接测试供给方与需求方�
 <div align=center><img src="bingo.png"></div>
 
 
-666
+66999
 
 
 
